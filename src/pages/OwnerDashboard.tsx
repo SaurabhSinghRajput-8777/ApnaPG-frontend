@@ -93,6 +93,7 @@ export function OwnerDashboard() {
     <div className="py-8 flex flex-col gap-8 flex-grow">
       <Routes>
         <Route path="/" element={<Navigate to="properties" replace />} />
+        <Route path="/dashboard" element={<Navigate to="/owner/properties" replace />} />
 
         {/* List View */}
         <Route path="/properties" element={

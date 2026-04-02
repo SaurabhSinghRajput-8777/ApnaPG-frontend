@@ -8,6 +8,7 @@ import { SignInPage } from "./pages/SignInPage";
 import { SignUpPage } from "./pages/SignUpPage";
 import { TenantDashboard } from "./pages/TenantDashboard";
 import { OwnerDashboard } from "./pages/OwnerDashboard";
+import { DashboardRedirect } from "./components/auth/DashboardRedirect";
 
 export default function App() {
   return (
@@ -20,6 +21,9 @@ export default function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/sign-in/*" element={<SignInPage />} />
           <Route path="/sign-up/*" element={<SignUpPage />} />
+
+          {/* Unified Redirector Hub after Login */}
+          <Route path="/dashboard" element={<DashboardRedirect />} />
 
           {/* Protected Tenant Routes */}
           <Route

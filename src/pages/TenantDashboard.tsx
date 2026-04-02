@@ -78,6 +78,7 @@ export function TenantDashboard() {
 
       <Routes>
         <Route path="/" element={<Navigate to="explore" replace />} />
+        <Route path="/dashboard" element={<Navigate to="/tenant/explore" replace />} />
 
         {/* Explore View */}
         <Route path="/explore" element={
