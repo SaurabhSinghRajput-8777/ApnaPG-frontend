@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { Download, Phone, Mail, FileText, Loader2, Star, ShieldCheck, AlertCircle } from "lucide-react";
+import { Download, Phone, Mail, FileText, Loader2, Star, AlertCircle } from "lucide-react";
 import { api } from "../../lib/api";
 import { ReviewForm } from "../reviews/ReviewForm";
 
