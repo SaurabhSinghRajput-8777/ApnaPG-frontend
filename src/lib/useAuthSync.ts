@@ -21,10 +21,8 @@ export function useAuthSync() {
     queryFn: async () => {
       if (!user) return null;
 
-      // Persist the role assignment natively into Clerk's metadata payload
-      if (user.unsafeMetadata?.role !== pathRole) {
-        await user.update({ unsafeMetadata: { ...user.unsafeMetadata, role: pathRole } });
-      }
+      // Note: We no longer update unsafeMetadata on the client to avoid infinite redirect loops 
+      // during Clerk session stabilization. The backend sync handles role-based persistency.
 
       const payload = {
         clerk_id: user.id,
