@@ -15,7 +15,7 @@ export const useHandshake = (propertyId: string) => {
       toast.success("Handshake sent! Connection request is pending.");
     },
     onError: (err: any) => {
-      const msg = err.response?.data?.detail || "Action failed.";
+      const msg = err.response?.data?.message || err.response?.data?.detail || "Action failed.";
       toast.error(typeof msg === 'string' ? msg : "You already have an active request for this property.");
     }
   });

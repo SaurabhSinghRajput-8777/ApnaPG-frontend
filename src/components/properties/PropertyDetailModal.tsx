@@ -21,7 +21,10 @@ export function PropertyDetailModal({ property, isOpen, onClose }: PropertyDetai
     if (property?.images?.length > 0) {
       setSelectedImage(property.images[0].url);
     }
-  }, [property]);
+    // 🛡️ CRITICAL FIX: Reset the handshake state when the property changes
+    // This allows the user to request multiple properties in one session.
+    handshake.reset();
+  }, [property?._id]);
 
   const handshake = useHandshake(property?._id);
 

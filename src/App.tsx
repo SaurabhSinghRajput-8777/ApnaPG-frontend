@@ -9,6 +9,7 @@ import { SignUpPage } from "./pages/SignUpPage";
 import { TenantDashboard } from "./pages/TenantDashboard";
 import { OwnerDashboard } from "./pages/OwnerDashboard";
 import { DashboardRedirect } from "./components/auth/DashboardRedirect";
+import { AIAssistant } from "./components/ui/AIAssistant";
 
 export default function App() {
   return (
@@ -58,6 +59,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <AIAssistant />
     </div>
   );
 }
