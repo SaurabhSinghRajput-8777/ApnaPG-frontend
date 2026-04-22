@@ -41,6 +41,7 @@ export const AIAssistant = () => {
       const { data } = await api.post("/api/ai/chat", { prompt: userMessage });
       setMessages((prev) => [...prev, { role: "assistant", content: data.response }]);
     } catch (error) {
+      console.error("❌ AI Assistant API Error:", error);
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: "Oops! I hit a snag. Please check your connection or try again." }
