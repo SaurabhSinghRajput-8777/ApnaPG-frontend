@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MessageSquare, Send, X, Bot, User, Loader2 } from "lucide-react";
 import { api } from "../../lib/api";
 import { clsx, type ClassValue } from "clsx";
